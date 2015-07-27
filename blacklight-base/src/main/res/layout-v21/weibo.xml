@@ -31,8 +31,8 @@
 		android:layout_height="match_parent"
 		android:layout_margin="5dp"
 		android:stateListAnimator="@anim/state_raise_up"
-		card_view:cardCornerRadius="3dp"
-		card_view:cardElevation="2.5dp"
+		card_view:cardCornerRadius="2dp"
+		card_view:cardElevation="2dp"
 		card_view:cardBackgroundColor="?attr/CardBackground">
 
 		<include layout="@layout/weibo_content" />
