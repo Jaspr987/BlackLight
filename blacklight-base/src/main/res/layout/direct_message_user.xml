@@ -28,8 +28,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_margin="5dp"
-		card_view:cardCornerRadius="3dp"
-		card_view:cardElevation="2.5dp"
+		card_view:cardCornerRadius="2dp"
+		card_view:cardElevation="2dp"
 		card_view:cardBackgroundColor="?attr/CardBackground">
 
 		<LinearLayout
@@ -40,52 +40,63 @@
 
 			<de.hdodenhof.circleimageview.CircleImageView
 				android:id="@+id/direct_message_avatar"
-				android:layout_height="50dp"
-				android:layout_width="50dp"
+				android:layout_height="36dp"
+				android:layout_width="36dp"
 				android:layout_gravity="left|top"
-				android:layout_margin="10dp"
+				android:layout_marginLeft="16dp"
+				android:layout_marginTop="16dp"
 				android:src="@color/gray"/>
 
 			<LinearLayout
 				android:layout_height="wrap_content"
 				android:layout_width="match_parent"
 				android:orientation="vertical"
-				android:layout_margin="10dp">
+				android:layout_margin="16dp">
 
-				<TextView
+				<LinearLayout
 					android:layout_height="wrap_content"
-					android:text="NAME"
 					android:layout_width="match_parent"
-					android:textStyle="bold"
-					android:id="@+id/direct_message_name"
-					android:textColor="?attr/CardForeground"
-					android:textSize="15sp"
-					android:ellipsize="end"
-					android:maxLength="50"
-					android:singleLine="true"/>
+					android:orientation="horizontal"
+					android:layout_gravity="center_horizontal">
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:text="NAME"
+						android:layout_width="wrap_content"
+						android:textStyle="bold"
+						android:id="@+id/direct_message_name"
+						android:textColor="?attr/CardForeground"
+						android:textSize="14sp"
+						android:ellipsize="end"
+						android:maxLength="50"
+						android:singleLine="true"/>
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:text="Date"
+						android:layout_width="match_parent"
+						android:textColor="?attr/CardSubColor"
+						android:textSize="12sp"
+						android:singleLine="true"
+						android:gravity="right"
+						android:id="@+id/direct_message_date"/>
+
+				</LinearLayout>
 
 				<TextView
 					android:layout_height="wrap_content"
 					android:text="Text"
 					android:layout_width="match_parent"
-					android:layout_marginTop="5dp"
+					android:layout_marginTop="4dp"
 					android:textColor="?attr/CardForeground"
-					android:textSize="15sp"
+					android:textSize="14sp"
 					android:ellipsize="end"
 					android:singleLine="false"
 					android:maxLines="4"
 					android:gravity="center_vertical"
 					android:id="@+id/direct_message_text"/>
 
-				<TextView
-					android:layout_height="wrap_content"
-					android:text="Date"
-					android:layout_width="match_parent"
-					android:textColor="?attr/CardForeground"
-					android:textSize="14sp"
-					android:singleLine="true"
-					android:layout_marginTop="5dp"
-					android:id="@+id/direct_message_date"/>
+
 
 			</LinearLayout>
 
