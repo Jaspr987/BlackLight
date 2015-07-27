@@ -47,7 +47,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_centerVertical="true"
-			android:textSize="14sp"
+			android:textSize="15dp"
 			android:textColor="?attr/CardForeground"
 			android:text="Author Name"
 			android:singleLine="true"
@@ -88,7 +88,7 @@
 		android:textColor="?attr/CardSubColor"
 		android:layout_below="@id/weibo_content"
 		android:layout_marginLeft="16dp"
-		android:layout_marginRight="8dp"
+		android:layout_marginRight="4dp"
 		android:paddingBottom="10dp"/>
 
 	<TextView
@@ -105,7 +105,7 @@
 		android:id="@+id/weibo_from"
 		android:layout_toRightOf="@id/weibo_from_divide"
 		android:layout_below="@id/weibo_content"
-		android:layout_marginLeft="8dp"
+		android:layout_marginLeft="4dp"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:textSize="12sp"
