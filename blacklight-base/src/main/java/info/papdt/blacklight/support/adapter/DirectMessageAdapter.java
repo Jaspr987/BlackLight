@@ -28,8 +28,6 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import android.support.v7.widget.CardView;
-
 import info.papdt.blacklight.R;
 import info.papdt.blacklight.model.DirectMessageListModel;
 import info.papdt.blacklight.model.DirectMessageModel;
@@ -84,7 +82,7 @@ public class DirectMessageAdapter extends BaseAdapter
 			LinearLayout container = h.container;
 			if (msg.sender_id == mUid) {
 				container.setGravity(Gravity.LEFT);
-				h.card.setBackgroundResource(R.color.purple_500);
+				h.card.setBackgroundResource(R.color.indigo_500);
 				h.content.setTextColor(mContext.getResources().getColor(R.color.white));
 			} else {
 				container.setGravity(Gravity.RIGHT);

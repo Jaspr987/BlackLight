@@ -28,8 +28,8 @@
 		<item name="android:windowNoTitle">true</item>
 		<item name="windowActionBar">false</item>
 		<item name="windowActionModeOverlay">true</item>
-		<item name="colorPrimary">@color/purple_500</item>
-		<item name="colorPrimaryDark">@color/purple_700</item>
+		<item name="colorPrimary">@color/indigo_500</item>
+		<item name="colorPrimaryDark">@color/indigo_700</item>
         <item name="colorAccent">@color/amber_700</item>
 		<item name="CardBackground">@color/white</item>
 		<item name="CardForeground">@color/darker_gray</item>
