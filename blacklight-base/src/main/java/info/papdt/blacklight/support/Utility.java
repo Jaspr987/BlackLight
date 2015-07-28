@@ -398,13 +398,16 @@ public class Utility
 
 	public static String addUnitToInt(Context context, int i) {
 		String tenThousand = context.getString(R.string.ten_thousand);
+		String thousand = context.getString(R.string.thousand);
 		String million = context.getString(R.string.million);
 		String hundredMillion = context.getString(R.string.hundred_million);
 		String billion = context.getString(R.string.billion);
 
 		if (tenThousand.equals("null")) { // English-styled number format
-			if (i < 1000000) {
+			if (i < 1000) {
 				return String.valueOf(i);
+			}else if (i < 1000000) { // thousand
+				return String.valueOf(i / 1000) + thousand;
 			} else if (i < 1000000000) { // million
 				return String.valueOf(i / 1000000) + million;
 			} else { // billion

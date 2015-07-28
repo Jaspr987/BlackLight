@@ -131,6 +131,7 @@
 	<string name="change_group">Change group</string>
 
 	<!-- Units -->
+	<string name="thousand">K</string>
 	<string name="ten_thousand">null</string>
 	<string name="million">M</string>
 	<string name="hundred_million">null</string>

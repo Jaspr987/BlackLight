@@ -125,10 +125,11 @@
 	<string name="change_group">修改分组</string>
 
 	<!-- Units -->
-	<string name="ten_thousand">万</string>
-	<string name="million">null</string>
-	<string name="hundred_million">亿</string>
-	<string name="billion">null</string>
+	<string name="thousand">K</string>
+	<string name="ten_thousand">null</string>
+	<string name="million">M</string>
+	<string name="hundred_million">null</string>
+	<string name="billion">B</string>
 	
 	<!-- Single -->
 	<string name="single_info">微博信息</string>

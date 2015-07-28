@@ -216,8 +216,8 @@
 						<info.papdt.blacklight.ui.common.TintImageView
 							android:id="@+id/user_follow_img"
 							android:scaleType="centerInside"
-							android:layout_width="25dp"
-							android:layout_height="25dp"
+							android:layout_width="18dp"
+							android:layout_height="18dp"
 							android:layout_marginRight="5dp"
 							android:src="@drawable/ic_action_new"
 							app:tintColor="?attr/CardForeground"/>
