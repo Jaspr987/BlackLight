@@ -19,7 +19,7 @@
 -->
 <resources>
 
-	<string name="app_name">BlackLight</string>
+	<string name="app_name">IndigoLight</string>
 
 	<!-- App Key -->
 	<string name="custom">自訂</string>
@@ -84,7 +84,7 @@
 	<string name="at">選擇@的好友</string>
 	<string name="topic">添加#</string>
 	<string name="long_post">長微博</string>
-	<string name="long_from">由BlackLight生成</string>
+	<string name="long_from">由IndigoLight生成</string>
 	<string name="comment_delete">刪除評論</string>
 	<string name="comment_view_orig">查看原微博</string>
 	<string name="refresh">刷新</string>
@@ -226,7 +226,7 @@
 	<string name="account_logout">註銷當前帳戶</string>
 	<string name="alipay">支付寶</string>
 	<string name="clear_cache">清空快取</string>
-	<string name="clear_cache_hint">系統設定 -> 應用程式 -> BlackLight</string>
+	<string name="clear_cache_hint">系統設定 -> 應用程式 -> IndigoLight</string>
 	<string name="digital_ocean">DigitalOcean 推廣連接</string>
 	<string name="donation">捐贈</string>
 	<string name="donation_des">歡迎捐贈支持</string>
