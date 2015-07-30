@@ -46,8 +46,8 @@
 	<color name="inset">#40000000</color>
 
 	<!-- Something different: purple -->
-	<color name="indigo_500">#3F51B5</color>
-	<color name="indigo_700">#303F9F</color>
+	<color name="purple_500">#3F51B5</color>
+	<color name="purple_700">#303F9F</color>
 
 	<!-- Teal -->
 	<color name="teal_500">#009688</color>
