@@ -170,7 +170,7 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 		}
 
 		//draft
-		mText.setText(mCache.getString(DRAFT,""));
+		if (needCache())mText.setText(mCache.getString(DRAFT,""));
 
 		// Fragments
 		mEmoticonFragment = new EmoticonFragment();
@@ -215,7 +215,7 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-				mCache.edit().putString(DRAFT, s.toString()).apply();
+				if (needCache()) mCache.edit().putString(DRAFT, s.toString()).apply();
 			}
 
 			@Override
@@ -440,7 +440,7 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 							case 1:
 								Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 								Uri uri = Utility.getOutputMediaFileUri();
-								captureIntent.putExtra(MediaStore.EXTRA_OUTPUT,uri);
+								captureIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
 								startActivityForResult(captureIntent, REQUEST_CAPTURE_PHOTO);
 								break;
 							case 2:
@@ -553,7 +553,6 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 				}
 			}
 			String id = PostApi.uploadPicture(bmp);
-			bmp.recycle();
 			if (id == null || id.trim().equals("")) return false;
 
 			pics += id;
@@ -565,6 +564,11 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 
 		// Upload text
 		return PostApi.newPostWithMultiPics(status, pics, mVersion);
+	}
+
+	//for draft
+	protected boolean needCache(){
+		return true;
 	}
 
 	private class Uploader extends AsyncTask<Void, Void, Boolean> {
@@ -592,7 +596,7 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 			prog.dismiss();
 
 			if (result) {
-				mCache.edit().putString(DRAFT,"").apply();
+				if (needCache()) mCache.edit().putString(DRAFT,"").apply();
 				finish();
 			} else {
 				new AlertDialog.Builder(NewPostActivity.this)
