@@ -264,8 +264,8 @@ public class MainActivity extends ToolbarActivity implements View.OnClickListene
 		final Drawable[] pageIcons = new Drawable[] {
 			getResources().getDrawable(R.drawable.ic_drawer_home),
 			getResources().getDrawable(R.drawable.ic_drawer_comment),
-			getResources().getDrawable(R.drawable.ic_drawer_commet_at),
 			getResources().getDrawable(R.drawable.ic_drawer_at),
+			getResources().getDrawable(R.drawable.ic_drawer_comment_at),
 			getResources().getDrawable(R.drawable.ic_drawer_pm),
 			getResources().getDrawable(R.drawable.ic_drawer_fav)
 		};
