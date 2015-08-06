@@ -121,7 +121,7 @@
 		android:layout_height="wrap_content"
 		android:orientation="horizontal"
         android:layout_alignRight="@id/weibo_content"
-		android:gravity="center_vertical|right">
+		android:gravity="center_horizontal|right">
 
 		<info.papdt.blacklight.ui.common.TintImageView
 			android:src="@drawable/ic_like"

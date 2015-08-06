@@ -73,6 +73,7 @@ public class DirectMessageConversationActivity extends AbsActivity implements Sw
 		// Initialize views
 		mList = Utility.findViewById(this, R.id.direct_message_conversation);
 		mText = Utility.findViewById(this, R.id.direct_message_send_text);
+		mText.setHint("发送私信");
 		mSend = Utility.findViewById(this, R.id.direct_message_send);
 		mSwipeRefresh = Utility.findViewById(this, R.id.direct_message_refresh);
 

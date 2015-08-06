@@ -27,9 +27,11 @@
 		style="@style/CardViewStyle"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_margin="5dp"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginTop="5dp"
 		card_view:cardCornerRadius="2dp"
-		card_view:cardElevation="2dp"
+		card_view:cardElevation="0dp"
 		card_view:cardBackgroundColor="?attr/CardBackground">
 
 		<LinearLayout
@@ -66,7 +68,7 @@
 						android:textStyle="bold"
 						android:id="@+id/direct_message_name"
 						android:textColor="?attr/CardForeground"
-						android:textSize="14sp"
+						android:textSize="15sp"
 						android:ellipsize="end"
 						android:maxLength="50"
 						android:singleLine="true"/>
@@ -89,7 +91,7 @@
 					android:layout_width="match_parent"
 					android:layout_marginTop="8dp"
 					android:textColor="?attr/CardForeground"
-					android:textSize="16sp"
+					android:textSize="15sp"
 					android:ellipsize="end"
 					android:singleLine="false"
 					android:lineSpacingMultiplier="1.2"
