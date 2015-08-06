@@ -86,7 +86,7 @@ public class UserTimeLineActivity extends AbsActivity
 		mModel = getIntent().getParcelableExtra("user");
 
 		if (!Utility.isDarkMode(this) && mModel.isMale() != UserApiCache.amIMale()) {
-			setTheme(R.style.BL_Theme_Purple);
+			setTheme(R.style.BL_Theme_Pink);
 		}
 
 		mLayout = R.layout.user_timeline_activity;

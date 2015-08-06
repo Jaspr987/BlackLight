@@ -68,6 +68,12 @@
 		<item name="colorAccent">@color/amber_700</item>
 	</style>
 
+	<style name="BL.Theme.Pink" parent="BL.Theme.Light.Base">
+		<item name="colorPrimary">@color/pink_500</item>
+		<item name="colorPrimaryDark">@color/pink_700</item>
+		<item name="colorAccent">@color/amber_700</item>
+	</style>
+
 	<style name="BL.Theme.Purple.WithNav" parent="BL.Theme.Purple" />
 
 	<style name="BL.Theme.Purple.Translucent" parent="BL.Theme.Purple">

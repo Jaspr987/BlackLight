@@ -54,6 +54,7 @@
 
 	<!-- Pink -->
 	<color name="pink_500">#e91e63</color>
+	<color name="pink_700">#C2185B</color>
 
 	<!-- Amber -->
 	<color name="amber_500">#ffc107</color>
