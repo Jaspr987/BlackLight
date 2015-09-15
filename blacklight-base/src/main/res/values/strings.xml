@@ -169,7 +169,7 @@
 		<item>\@vip.qq.com</item>
 		<item>\@yeah.net</item>
 	</string-array>
-	
+
 	<string-array name="contributor_weibo_uids" translatable="false">
 		<item>1870051034</item>
 		<item>1689129907</item>
@@ -180,7 +180,7 @@
 		<item>2263023493</item>
 		<item>5611860244</item>
 	</string-array>
-	
+
 	<string-array name="thank_weibo_uids" translatable="false">
 		<item>2984891190</item>
 		<item>1797272061</item>
@@ -252,11 +252,11 @@
 	<string name="donation_des">Donate if you like ;-)</string>
 	<string name="alipay">Alipay</string>
 	<string name="paypal" translatable="false">Paypal</string>
-	<string name="digital_ocean">DigitalOcean Referral Links</string>
 	<string name="petercxy">PeterCxy (Main Dev)</string>
-	<string name="petercxy_alipay" translatable="false">xqsx43cxy@gmail.com</string>
+	<string name="petercxy_alipay" translatable="false">peter@typeblog.net</string>
 	<string name="petercxy_paypal" translatable="false">xqsx43cxy@126.com</string>
-	<string name="petercxy_do" translatable="false">https://www.digitalocean.com/?refcode=d24140d44ee7</string>
+	<string name="xavieryao">Xavier Yao (Assistant Dev)</string>
+	<string name="xavieryao_alipay" translatable="false">xavieryao@live.cn</string>
 	<string name="micromacer">Micromacer (Designer)</string>
 	<string name="micromacer_alipay" translatable="false">micromacer@me.com</string>
 
@@ -299,5 +299,7 @@
 		<item>I\'m gonna go mad, seriously.</item>
 		<item>Okay, you win.</item>
 	</string-array>
+	<string name="direct_message_pic_gallery">Pick from gallery</string>
+	<string name="direct_message_pic_take">Take photo</string>
 
 </resources>

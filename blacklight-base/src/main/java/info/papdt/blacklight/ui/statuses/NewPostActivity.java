@@ -75,7 +75,7 @@ import info.papdt.blacklight.ui.common.MultiPicturePicker;
 
 import static info.papdt.blacklight.BuildConfig.DEBUG;
 
-public class NewPostActivity extends AbsActivity implements View.OnLongClickListener
+public class NewPostActivity extends AbsActivity implements View.OnLongClickListener, View.OnClickListener
 {
 	private static final String TAG = NewPostActivity.class.getSimpleName();
 	private static final String DRAFT="post_draft";
@@ -170,9 +170,6 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 			mText.setHint(mHints[new Random().nextInt(mHints.length)]);
 		}
 
-		//draft
-		if (needCache())mText.setText(mCache.getString(DRAFT,""));
-
 		// Fragments
 		mEmoticonFragment = new EmoticonFragment();
 		mColorPickerFragment = new ColorPickerFragment();
@@ -266,6 +263,13 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 			public void onGlobalLayout() {
 				mText.requestFocus();
 				mText.requestFocusFromTouch();
+				
+				// Draft
+				if (needCache())
+					mText.setText(mCache.getString(DRAFT, ""));
+					
+				// Must be removed
+				getWindow().getDecorView().getViewTreeObserver().removeGlobalOnLayoutListener(this);
 			}
 		});
 
@@ -273,6 +277,7 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 		for (int i = 0; i < 9; i++) {
 			mPics[i] = (ImageView) mPicsParent.getChildAt(i);
 			mPics[i].setOnLongClickListener(this);
+			mPics[i].setOnClickListener(this);
 		}
 
 		// Handle share intent
@@ -348,6 +353,23 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 			}
 		}
 		return true;
+	}
+
+	@Override
+	public void onClick(View v) {
+		if (mIsLong) {
+			// Insert pictures into long post
+			for (int i = 0; i < 9; i++) {
+				if (mPics[i] == v) {
+					String insert = "![" + (i + 1) + "]\n";
+					if (mText.getText().charAt(mText.getSelectionStart() - 1) != '\n') {
+						insert = "\n" + insert;
+					}
+					mText.getText().insert(mText.getSelectionStart(), insert);
+					break;
+				}
+			}
+		}
 	}
 
 	@Override
@@ -512,11 +534,12 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 				Log.d(TAG, "Preparing to post a long post");
 			}
 
-			Bitmap bmp = null;
-
-			// Post the first picture with long post
-			if (mBitmaps.size() > 0) {
-				bmp = mBitmaps.get(0);
+			// Post the pictures with long post
+			int size = mBitmaps.size();
+			Bitmap[] bitmaps = new Bitmap[size];
+			
+			for (int i = 0; i < size; i++) {
+				Bitmap bmp = mBitmaps.get(0);
 				String path = mPaths.get(0);
 
 				if (path != null) {
@@ -529,9 +552,11 @@ public class NewPostActivity extends AbsActivity implements View.OnLongClickList
 
 				mBitmaps.remove(0);
 				mPaths.remove(0);
+				
+				bitmaps[i] = bmp;
 			}
 
-			bmp = LongPostUtility.parseLongPost(this, mText.getText().toString(), bmp);
+			Bitmap bmp = LongPostUtility.parseLongPost(this, mText.getText().toString(), bitmaps);
 			mBitmaps.add(0, bmp);
 			mPaths.add(0, null);
 
