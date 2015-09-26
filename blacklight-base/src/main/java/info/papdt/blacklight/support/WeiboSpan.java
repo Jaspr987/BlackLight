@@ -29,6 +29,7 @@ import android.view.View;
 
 import info.papdt.blacklight.cache.user.UserApiCache;
 import info.papdt.blacklight.model.UserModel;
+import info.papdt.blacklight.support.WeiboUrlUtility;
 import info.papdt.blacklight.ui.search.TopicsActivity;
 import info.papdt.blacklight.ui.statuses.UserTimeLineActivity;
 
@@ -56,10 +57,7 @@ public class WeiboSpan extends ClickableSpan
 		
 		if (mUri.getScheme().startsWith("http")) {
 			// TODO View some weibo pages inside app
-			Intent i = new Intent();
-			i.setAction(Intent.ACTION_VIEW);
-			i.setData(mUri);
-			context.startActivity(i);
+			new WeiboUrlUtility(mUri).view(context);
 		} else {
 			if (mUri.getScheme().startsWith("us.shandian.blacklight.user")) {
 				String name = mUrl.substring(mUrl.lastIndexOf("@") + 1, mUrl.length());
@@ -104,7 +102,7 @@ public class WeiboSpan extends ClickableSpan
 			Context context = (Context) result[0];
 			UserModel usr = (UserModel) result[1];
 			
-			if (usr != null && usr.id != null & !usr.id.trim().equals("")) {
+			if (usr != null && usr.id != null && !usr.id.trim().equals("")) {
 				Intent i = new Intent();
 				i.setAction(Intent.ACTION_MAIN);
 				i.setClass(context, UserTimeLineActivity.class);
