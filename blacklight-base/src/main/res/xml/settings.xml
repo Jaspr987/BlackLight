@@ -36,9 +36,13 @@
 		<Preference
 		    android:key="notification_interval"
 		    android:title="@string/notification_interval" />
+
+		<Preference
+			android:key="notification_type"
+			android:title="@string/notification_type" />
 		
 	</PreferenceCategory>
-    
+
 	<!-- Actions -->
 	<PreferenceCategory
 		android:title="@string/actions">
