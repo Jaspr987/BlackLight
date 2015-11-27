@@ -19,6 +19,7 @@
 
 package info.papdt.blacklight.ui.entry;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ import info.papdt.blacklight.receiver.ConnectivityReceiver;
 import info.papdt.blacklight.support.CrashHandler;
 import info.papdt.blacklight.support.Emoticons;
 import info.papdt.blacklight.support.FilterUtility;
+import info.papdt.blacklight.support.PermissionUtility;
 import info.papdt.blacklight.support.Utility;
 import info.papdt.blacklight.support.feedback.SubmitLogTask;
 import info.papdt.blacklight.support.http.FeedbackUtility;
@@ -39,9 +41,13 @@ public class EntryActivity extends Activity
 {
 
 	@Override
+	@TargetApi(23)
 	protected void onCreate(Bundle savedInstanceState) {
-		CrashHandler.init(this);
-		CrashHandler.register();
+		// Only register the handler when permission is granted.
+		if (PermissionUtility.hasStoragePermission(this)) {
+			CrashHandler.init(this);
+			CrashHandler.register();
+		}
 		
 		super.onCreate(savedInstanceState);
 
