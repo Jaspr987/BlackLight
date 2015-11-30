@@ -130,6 +130,13 @@
 	<string name="unfollow">Unfollow</string>
 	<string name="change_group">Change group</string>
 
+	<!-- User Profile -->
+	<string name="uid">UID</string>
+	<string name="created_at">Created At</string>
+	<string name="location">Location</string>
+	<string name="verified_reason">Verified Reason</string>
+	<string name="gender">Gender</string>
+
 	<!-- Units -->
 	<string name="thousand">K</string>
 	<string name="ten_thousand">null</string>
@@ -233,6 +240,7 @@
 	<string name="auto_nopic_sum">Load pictures only if WiFi is connected</string>
 	<string name="keyword">Keyword filtering</string>
 	<string name="keyword_sum">Multiple keywords should be split by \", \" (a comma and a space), Regular Expressions should be wrapped by \"`\".</string>
+	<string name="style_text">Apply styles on text</string>
 	<string name="show_bigtext">Show notification details</string>
 	<string name="show_bigtext_sum">Show detailed information in notifications (Valid on Android 4.1+). May cause more power or traffic consumption.</string>
 	<string-array name="interval_name">
